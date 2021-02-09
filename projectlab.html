@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Project</title>
+<style>
+h2{
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+body{
+background-image:url("https://c8.alamy.com/comp/M9N0JW/watercolor-handmade-colorful-background-with-butterflies-can-be-used-for-your-project-and-logowallpapergreeting-cardinvitationdecoration-M9N0JW.jpg");
+background-repeat:repeat-x;
+}
+</style>
+</head>
+<body>
+<img src="https://c8.alamy.com/comp/M9N0JW/watercolor-handmade-colorful-background-with-butterflies-can-be-used-for-your-project-and-logowallpapergreeting-cardinvitationdecoration-M9N0JW.jpg">
+<h2 id="demo"></h2>
+<script>
+var var1 = setInterval(inTimer,1000);
+var font_size = 5;
+var increase_decrease_style = document.getElementById("demo");
+function inTimer()
+ {
+increase_decrease_style.innerHTML = 'TEXT GROWING';
+increase_decrease_style.setAttribute('style', "font-size: " + font_size + "px; color: red");
+font_size =font_size + 5;
+if(font_size >= 50 )
+{
+clearInterval(var1);
+var2 = setInterval(deTimer, 1000);
+}
+}
+
+function deTimer() {
+font_size =font_size - 5;
+increase_decrease_style.innerHTML = 'TEXT SHRINKING';
+increase_decrease_style.setAttribute('style', "font-size: " + font_size + "px; color: blue");
+if(font_size === 5 ){
+clearInterval(var2);
+}
+}
+</script>
+</body>
+</html>
